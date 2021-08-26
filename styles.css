@@ -1,0 +1,614 @@
+/*general settings*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap');
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: #777;
+}
+
+html > *{
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+p {
+    font-size: 1.5rem;
+}
+.container > *{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+    margin-bottom: 2em;
+}
+.btn {
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.67em;
+}
+
+/*Navigation bar*/
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.nav li {
+    font-size: 1.5em;
+    list-style: none;
+    width: 10vw;
+    margin: 1em;
+}
+.nav a {
+    color: #999;
+    text-decoration: none;
+    transition: 250ms ease;
+}
+.nav-item {
+    position: relative;
+    transition: 250ms ease;
+}
+.nav-item::after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    bottom: -5px;
+    left: 0;
+    transition: 250ms ease;
+    transform-origin: center;
+    transform: scale(0);
+}
+.nav-item.light::after,
+.nav-item:hover::after {
+    transform: scale(1);
+} 
+.nav-item.light,
+.nav-item:hover {
+    color: white;
+}
+.main-nav {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+}
+.main-nav li {
+    padding: 0 2%;
+}
+
+/*Header*/
+
+header {
+    height: 100%;
+}
+.main-header {
+    background-color: rgba(0, 0, 0, 0.6);
+    background-image: url(picture/header.jpg);
+    background-blend-mode: multiply;
+    padding-bottom: 30px;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.class-name {
+    text-align: center;
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'Style Script', cursive;
+    font-weight: lighter;
+    color: white;
+}
+.class-name-large {
+    font-size: 9em;
+}
+.footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+/*Section*/
+
+.section-header {
+    font-family: 'Montserrat', sans-serif;
+    color:  #333;
+    font-size: 2em;
+    border-bottom: 2px solid #333;
+    border-bottom-width: .25em;
+}
+.content-section {
+    margin: 1em;
+}
+
+/*Footer*/
+
+.main-footer {
+    background-color: rgb(44, 44, 44);
+    color: white;
+    padding: .25 0;
+    padding-top: .2em;
+    
+}
+.main-footer-container {
+    display: flex;
+    align-items: center;
+}
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
+}
+.footer-nav li{
+    padding: 0 .5em;
+}
+.footer-nav img{
+    height: 30px;
+    width: 30px;
+}
+.footer-nav {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.ft {
+    transition: 250ms ease;
+}
+.ft:hover {
+    transform: scale(1.2);
+}
+/*Big circle buton at journey.html*/
+
+.btn-header {
+    display: block;
+    margin: 0 auto;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0;
+    width: 100px;
+    height: 100px;
+    font-size: 4em;
+}
+.btn-header::after {
+    content: 'Where the journey started..';
+    position: absolute;
+    background-color: white;
+    color: #333;
+    font-size: 25px;
+    bottom: 56vh;
+    left: 55%;
+    border: none;
+    width: 400px;
+    border-radius: 30px;
+    transform: scale(0);
+    transition: 500ms ease;
+    transform-origin: left;
+    margin-left: 10px;
+}
+.btn-header:hover::after {
+    transform: scale(1);
+}
+.btn-header:hover {
+    background-color: rgba(255, 255, 255, 0.3);;
+}
+.main-header a {
+    text-decoration: none;
+}
+
+/*Board of vacations in journey.html*/
+
+.vac-row {
+    border-bottom: 1px solid #333;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+.vac-row:last-child {
+    border-bottom: none;
+}
+.vac-item {
+    display: inline-block;
+    margin-right: 1.9em;
+}
+.vac-time {
+    color: #555;
+    font-weight: bold;
+}
+.vac-city {
+    width: 24%;
+}
+.vac-resort {
+    width: 40%;
+}
+.vac-btn {
+    max-width: 30%;
+    transition: 250ms ease;
+}
+.btn-primary {
+    color: white;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+}
+.vac-btn:hover {
+    transform: scale(1.2);
+}
+
+/*card of blogs in blogs.html*/
+
+.blog-block {
+    position: relative;
+    display: flex;
+    background-image: url(picture/no-profile.png);
+    height: 220px;
+    width: 220px;
+    background-size: cover;
+    flex-direction: column;
+    overflow: hidden;
+    transition: 250ms ease;
+    margin: 3ch;
+}
+.blog-details {
+    background-color: #333;
+    margin-top: 220px;
+    padding: 10px;
+    transition: 250ms ease;
+}
+.blog-name {
+    margin-top: -5px;
+    position: relative;
+    color: white;
+}
+.blog-name::after {
+    position: absolute;
+    content: '';
+    bottom: -9px;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: white;
+    transition: 500ms ease;
+}
+.blog-block:hover .blog-name::after {
+    width: 60%;
+}
+.blog-block:hover {
+    transform: scale(1.2);
+}
+.blog-block:hover .blog-details {
+    margin-top: 128px;
+}
+.blog-btn {
+    background-color: white;
+    color: #333;
+    width: 50%;
+    border-radius: 30px;
+}
+.blog-btn:hover {
+    background-color: #333;
+    color: white;
+}
+.blog-blocks {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+
+}
+.blog-block.bg1 {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(picture/minimalist.jpg);
+    background-blend-mode: multiply;
+}
+.blog-block.bg2 {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(picture/Dalat.JPG);
+    background-blend-mode: multiply;
+}
+.blog-block.bg3 {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(picture/A9\ \(1\).jpg);
+    background-blend-mode: multiply;
+}
+
+/*tweet box in index.html ( prototype )*/
+/*only for decoration purposes*/
+
+.mes-box-input img {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+.mes-box form {
+    display: flex;
+    flex-direction: column;
+}
+.mes-box-input {
+    display: flex;
+    padding: 20px;
+}
+.mes-box-input input {
+    flex: 1;
+    margin-left: 20px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+.mes-btn-send {
+    background-color: #333;
+    border: none;
+    color: white;
+    font-weight: 900;
+    border-radius: 30px;
+    width: 80px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: auto;
+}
+.mes-btn-send:hover {
+    background-color: #555;
+}
+.mes-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.form {
+    margin-bottom: 200px;
+}
+
+/*vacations.html*/
+
+.part {
+    padding-bottom: 100px;
+}
+.part h3 {
+    font-size: 2em;
+}
+
+/*Security*/
+
+.secure-section {
+    z-index: 999;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-image: url(picture/header.jpg);
+    background-blend-mode: multiply;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.question-panel {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 30vw;
+    height: 40vh;
+    align-items:center;
+    overflow: auto;
+    padding: 15px;
+}
+.question {
+    font-size: 2em;
+    font-weight:600;
+    color: rgb(0, 33, 71);
+    margin-bottom: 30px;
+    margin: 0 auto;
+}
+.question1 {
+    font-size: 1.5em;
+    font-weight:300;
+    color: rgb(0, 33, 71);
+    margin-bottom: 30px;
+    margin: 0 auto;
+}
+
+.secure-section.show {
+    display: none;
+}
+.login-form.show {
+    display: none;
+}
+.btn.login-btn.start.show {
+    display: none;
+}
+.btn.login-btn.key.show {
+    display: none;
+}
+.btn.login-btn.skip.show {
+    display: none;
+}
+.answer {
+    display: none;
+}
+.login-btn {
+    font-size: 20px;
+    border: none;
+    width: 370px;
+    margin: 5px;
+    background-color: #333;
+    color: white;
+    transition: 250ms ease;
+    margin-top: 23px;
+}
+.login-btn:hover {
+    background-color: rgb(0, 33, 71);
+    transform: scale(1.1);
+}
+.log-box-input input {
+    flex: 1;
+    font-size: 20px;
+    outline: none;
+    width: 370px;
+    height: 140px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.log-btn {
+    width: 10em;
+}
+.answers {
+    margin-bottom: 20px;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+#submit{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    font-size: 20px;
+    background-color: #333;
+    color: #fff;
+    border: 0px;
+    border-radius: 30px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+#submit::after {
+    display: none;
+    position: absolute;
+    top: -5px;
+    left: 150px;
+    content: 'All questions must correct';
+    color: red;
+    font-size: 15px;
+}
+#submit.show::after {
+    display:flex;
+}
+#submit:hover{
+    background-color: #777;
+}
+#submit.show2 {
+    display: none;
+}
+#quiz.show2 {
+    display: none;
+}
+#quiz {
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    padding-top: 20px;
+}
+#returnBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(0, 33, 71);
+    cursor: pointer;
+    color: white;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+#returnBtn:hover {
+    background-color: rgb(35, 93, 158);
+}
+
+#returnBtn.show2 {
+    display: none;
+}
+.arrow {
+    background-image: url(picture/arrow.png);
+    background-size: cover;
+    background-position: center;
+    z-index: 999;
+    width: 55vw;
+    height: 8vh;
+}
+.place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 160px;
+    margin-bottom: 120px;
+}
+.btn2 {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    border: 10px solid black;
+    background-color: white;
+    color: black;
+    margin: 0 50px;
+    z-index: 1000;
+    cursor: pointer;
+    transition: 250ms ease;
+}
+.btn2:hover {
+    transform: scale(1.1);
+}
+.p1 {
+    display: none;
+}
+.p2 {
+    display: none;
+}
+.p3 {
+    display: none;
+}
+.p4 {
+    display: none;
+}
+.p1.show {
+    display: flex;
+}
+.p2.show {
+    display: flex;
+}
+.p3.show {
+    display: flex;
+}
+.p4.show {
+    display: flex;
+}
+.btn2.active {
+    background-color: black;
+    color: white;
+}
+.profile-pic {
+    height: 300px;
+    width: 300px;
+    margin-right: 30px;
+}
+.positioning {
+    display: flex;
+}
+
