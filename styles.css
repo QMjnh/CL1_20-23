@@ -211,7 +211,7 @@ header {
     text-decoration: none;
 }
 
-/*Board of vacations in journey.html*/
+/*Board of timeline in journey.html*/
 
 .vac-row {
     border-bottom: 1px solid #333;
@@ -311,7 +311,7 @@ header {
 }
 .blog-block.bg1 {
     background-color: rgba(0, 0, 0, 0.3);
-    background-image: url(picture/minimalist.jpg);
+    background-image: url(picture/cl1\ nowzone.jpg);
     background-blend-mode: multiply;
 }
 .blog-block.bg2 {
@@ -372,7 +372,7 @@ header {
     margin-bottom: 200px;
 }
 
-/*vacations.html*/
+/*timeline.html*/
 
 .part {
     padding-bottom: 100px;
